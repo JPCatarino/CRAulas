@@ -1,0 +1,5 @@
+clk (1 bit)
+enable (1bit)
+digitEnable (8 bit)
+digit_value (8 * 4 bit)
+decimalPoint_enable(8 bits)
