@@ -52,6 +52,7 @@ architecture Behavioral of Nexys4DisplayDriver is
     signal s_enableDigit : STD_LOGIC;
     signal s_currentV    : STD_LOGIC_VECTOR(3 downto 0);
     signal s_counter     : unsigned(2 downto 0) := "000";
+    signal s_DispSeg     : STD_LOGIC_VECTOR(6 downto 0);
 
 begin
 
@@ -125,29 +126,37 @@ begin
             end process;
 
     -- Binary Segment Decoder 
-    segDec: process(s_enableDigit, s_currentV)
+    segDec: process(s_currentV)
             begin
-                if(s_enableDigit = '1') then
-                    case s_currentV is 
-                        when "0000" => dispSeg_n <= "1000000";     -- 0 
-                        when "0001" => dispSeg_n <= "1111001";     -- 1
-                        when "0010" => dispSeg_n <= "0100100";     -- 2
-                        when "0011" => dispSeg_n <= "0110000";     -- 3
-                        when "0100" => dispSeg_n <= "0011001";     -- 4
-                        when "0101" => dispSeg_n <= "0010010";     -- 5
-                        when "0110" => dispSeg_n <= "0000010";     -- 6
-                        when "0111" => dispSeg_n <= "1111000";     -- 7
-                        when "1000" => dispSeg_n <= "0000000";     -- 8
-                        when "1001" => dispSeg_n <= "0010000";     -- 9
-                        when "1010" => dispSeg_n <= "0001000";     -- A
-                        when "1011" => dispSeg_n <= "0000011";     -- B
-                        when "1100" => dispSeg_n <= "1000110";     -- C
-                        when "1101" => dispSeg_n <= "0100001";     -- D
-                        when "1110" => dispSeg_n <= "0000110";     -- E
-                        when "1111" => dispSeg_n <= "0001110";     -- F
-                        when others => dispSeg_n <= "1111111";     -- NOTHING
-                    end case;
-                end if;
-            end process; 
+                case s_currentV is 
+                    when "0000" => s_DispSeg <= "1000000";     -- 0 
+                    when "0001" => s_DispSeg <= "1111001";     -- 1
+                    when "0010" => s_DispSeg <= "0100100";     -- 2
+                    when "0011" => s_DispSeg <= "0110000";     -- 3
+                    when "0100" => s_DispSeg <= "0011001";     -- 4
+                    when "0101" => s_DispSeg <= "0010010";     -- 5
+                    when "0110" => s_DispSeg <= "0000010";     -- 6
+                    when "0111" => s_DispSeg <= "1111000";     -- 7
+                    when "1000" => s_DispSeg <= "0000000";     -- 8
+                    when "1001" => s_DispSeg <= "0010000";     -- 9
+                    when "1010" => s_DispSeg <= "0001000";     -- A
+                    when "1011" => s_DispSeg <= "0000011";     -- B
+                    when "1100" => s_DispSeg <= "1000110";     -- C
+                    when "1101" => s_DispSeg <= "0100001";     -- D
+                    when "1110" => s_DispSeg <= "0000110";     -- E
+                    when "1111" => s_DispSeg <= "0001110";     -- F
+                    when others => s_DispSeg <= "1111111";     -- NOTHING
+                end case;
+            end process;
+    
+    -- MUX 2:1 for segment
+    sgMux: process(s_DispSeg, s_enableDigit)
+           begin
+              if (s_enableDigit = '1') then
+                dispSeg_n <= s_DispSeg;
+              else
+                dispSeg_n <= "1111111";
+              end if;
+           end process;
 
 end Behavioral;
