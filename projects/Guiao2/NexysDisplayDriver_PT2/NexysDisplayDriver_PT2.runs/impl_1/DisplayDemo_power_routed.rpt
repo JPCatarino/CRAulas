@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Thu Mar  5 11:57:51 2020
+| Date             : Thu Mar  5 12:27:55 2020
 | Host             : DESKTOP-DS21IC9 running 64-bit major release  (build 9200)
 | Command          : report_power -file DisplayDemo_power_routed.rpt -pb DisplayDemo_power_summary_routed.pb -rpx DisplayDemo_power_routed.rpx
 | Design           : DisplayDemo
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.101        |
+| Total On-Chip Power (W)  | 0.098        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.004        |
+| Dynamic (W)              | 0.001        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 84.5         |
-| Junction Temperature (C) | 25.5         |
+| Max Ambient (C)          | 84.6         |
+| Junction Temperature (C) | 25.4         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |      433 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      278 |     63400 |            0.44 |
-|   CARRY4       |    <0.001 |       54 |     15850 |            0.34 |
-|   Register     |    <0.001 |       64 |    126800 |            0.05 |
+| Clocks         |    <0.001 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |      105 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       35 |     63400 |            0.06 |
+|   CARRY4       |    <0.001 |        8 |     15850 |            0.05 |
+|   Register     |    <0.001 |       45 |    126800 |            0.04 |
 |   Others       |     0.000 |        5 |       --- |             --- |
-| Signals        |     0.001 |      394 |       --- |             --- |
+| Signals        |    <0.001 |       93 |       --- |             --- |
 | I/O            |    <0.001 |       19 |       210 |            9.05 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.101 |          |           |                 |
+| Total          |     0.098 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.019 |       0.004 |      0.015 |
+| Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -137,11 +137,8 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------------+-----------+
-| Name              | Power (W) |
-+-------------------+-----------+
-| DisplayDemo       |     0.004 |
-|   pulse_generator |     0.004 |
-+-------------------+-----------+
++------+-----------+
+| Name | Power (W) |
++------+-----------+
 
 

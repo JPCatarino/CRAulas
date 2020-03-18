@@ -26,7 +26,7 @@ begin
 		        blink1Hz     <= '0';
 				s_counter    <= 0;
 		    else
-		        if (s_counter rem 125000 = 0) then
+		        if (s_counter rem 131072 = 0) then
 		            pulseDisplay <= '1';
 		        else
 		            pulseDisplay <= '0';

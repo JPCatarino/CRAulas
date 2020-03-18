@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Mar  5 11:57:51 2020
+| Date         : Thu Mar  5 12:27:55 2020
 | Host         : DESKTOP-DS21IC9 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file DisplayDemo_methodology_drc_routed.rpt -pb DisplayDemo_methodology_drc_routed.pb -rpx DisplayDemo_methodology_drc_routed.rpx
 | Design       : DisplayDemo
@@ -23,21 +23,15 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 19
+             Violations found: 18
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-16 | Warning  | Large setup violation         | 1          |
 | TIMING-18 | Warning  | Missing input or output delay | 18         |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-TIMING-16#1 Warning
-Large setup violation  
-There is a large setup violation of -2.503 ns between pulse_generator/s_counter_reg[10]/C (clocked by sys_clk_pin) and pulse_generator/pulseDisplay_reg/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on btnCpuReset relative to clock(s) sys_clk_pin
