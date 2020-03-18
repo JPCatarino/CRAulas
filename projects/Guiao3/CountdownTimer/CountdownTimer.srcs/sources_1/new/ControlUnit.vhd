@@ -72,10 +72,22 @@ begin
     end process;
 
     fsm_proc:
-    process(s_currentState, btnStart, btnSet, btnUp,  btnDown)
+    process(s_currentState, btnStart, btnSet, btnUp,  btnDown, zeroFlag, upDownEn)
     begin
         
         setFlags <= "0000";
+        
+        minMSSetInc <= '0';
+        minMSSetDec <= '0';
+        minLSSetInc <= '0';
+        minLSSetDec <= '0';
+        secMSSetInc <= '0';
+        secMSSetDec <= '0';
+        secLSSetInc <= '0';
+        secLSSetDec <= '0';
+        
+        runFlag <= '0';
+
         
         case s_currentState is
         
@@ -102,10 +114,12 @@ begin
                 minMSSetInc <= '0';
                 minMSSetDec <= '0';
                 
-                if(btnUp = '1') then
+                if(btnUp = '1' and upDownEn = '1') then
                     minMSSetInc <= '1';
-                elsif(btnDown = '1') then
+                    s_nextState <= ST_MINMS;
+                elsif(btnDown = '1' and upDownEn = '1') then
                     minMSSetDec <= '1';
+                    s_nextState <= ST_MINMS;
                 elsif(btnSet = '1') then
                     s_nextState <= ST_MINLS;
                 else
@@ -117,10 +131,12 @@ begin
                 minLSSetInc <= '0';
                 minLSSetDec <= '0';
                 
-                if(btnUp = '1') then
+                if(btnUp = '1' and upDownEn = '1') then
                     minLSSetInc <= '1';
-                elsif(btnDown = '1') then
+                    s_nextState <= ST_MINLS;
+                elsif(btnDown = '1' and upDownEn = '1') then
                     minLSSetDec <= '1';
+                    s_nextState <= ST_MINLS;
                 elsif(btnSet = '1') then
                     s_nextState <= ST_SECMS;
                 else
@@ -132,10 +148,12 @@ begin
                 secMSSetInc <= '0';
                 secMSSetDec <= '0';
                 
-                if(btnUp = '1') then
+                if(btnUp = '1' and upDownEn = '1') then
                     secMSSetInc <= '1';
-                elsif(btnDown = '1') then
+                    s_nextState <= ST_SECMS;                    
+                elsif(btnDown = '1' and upDownEn = '1') then
                     secMSSetDec <= '1';
+                    s_nextState <= ST_SECMS;
                 elsif(btnSet = '1') then
                     s_nextState <= ST_SECLS;
                 else
@@ -147,15 +165,20 @@ begin
                 secLSSetInc <= '0';
                 secLSSetDec <= '0';
                 
-                if(btnUp = '1') then
+                if(btnUp = '1' and upDownEn = '1') then
                     secLSSetInc <= '1';
-                elsif(btnDown = '1') then
+                    s_nextState <= ST_SECLS;
+                elsif(btnDown = '1' and upDownEn = '1') then
                     secLSSetDec <= '1';
+                    s_nextState <= ST_SECLS;
                 elsif(btnSet = '1') then
                     s_nextState <= ST_STOPPED;
                 else
                     s_nextState <= ST_SECLS;
                 end if;
+             
+             when others =>
+                s_nextState <= ST_STOPPED;
         end case;
     end process;
 

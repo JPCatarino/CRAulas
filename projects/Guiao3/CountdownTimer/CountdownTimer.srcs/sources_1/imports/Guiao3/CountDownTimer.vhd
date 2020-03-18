@@ -119,7 +119,7 @@ begin
                              minMSCntVal    => s_minMSCntVal,
                              zeroFlag       => s_zeroFlag);
 
-    s_digitEn <= (not s_setFlags(3) or s_blink2Hz) & (not s_setFlags(2) or s_blink2Hz) & (not s_setFlags(1) or s_blink2Hz) & (not s_setFlags(0) or s_blink2Hz);
+    s_digitEn <= "00" & (not s_setFlags(3) or s_blink2Hz) & (not s_setFlags(2) or s_blink2Hz) & (not s_setFlags(1) or s_blink2Hz) & (not s_setFlags(0) or s_blink2Hz) & "00";
     s_decPtEn <= "000" & s_blink1Hz & "0000";
 
     display_driver : entity work.Nexys4DisplayDriver(Behavioral)
