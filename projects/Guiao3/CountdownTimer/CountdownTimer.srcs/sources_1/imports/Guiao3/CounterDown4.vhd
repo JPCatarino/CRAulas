@@ -26,7 +26,7 @@ begin
 		if (rising_edge(clk)) then
 			if (reset = '1') then
 				s_value <= MAX_VAL;
-            elsif (cntEnable = '0') then
+            elsif (cntEnable = '0' and clkEnable = '1') then
 			    if(setIncrem = '1') then
 			         if(s_value = MAX_VAL) then
 			             s_value <= 0;

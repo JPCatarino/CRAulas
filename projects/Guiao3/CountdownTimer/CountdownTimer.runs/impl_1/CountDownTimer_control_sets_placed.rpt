@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Mar 19 01:55:53 2020
+| Date         : Thu Mar 19 11:08:02 2020
 | Host         : DESKTOP-DS21IC9 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file CountDownTimer_control_sets_placed.rpt
 | Design       : CountDownTimer
@@ -58,7 +58,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              11 |            6 |
+| No           | No                    | No                     |              11 |            8 |
 | No           | No                    | Yes                    |               5 |            2 |
 | No           | Yes                   | No                     |              47 |           14 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -73,12 +73,12 @@ Table of Contents
 +----------------+------------------------------------------------+------------------------------------------------+------------------+----------------+
 |  Clock Signal  |                  Enable Signal                 |                Set/Reset Signal                | Slice Load Count | Bel Load Count |
 +----------------+------------------------------------------------+------------------------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG | pulse_generator/pulse1Hz_reg_0[0]              | reset_module/s_reset                           |                1 |              4 |
 |  clk_IBUF_BUFG | pulse_generator/E[0]                           | reset_module/s_reset                           |                2 |              4 |
+|  clk_IBUF_BUFG | pulse_generator/pulse1Hz_reg_4[0]              | reset_module/s_reset                           |                1 |              4 |
 |  clk_IBUF_BUFG |                                                | reset_module/s_shiftReg[4]_i_1_n_0             |                2 |              5 |
 |  clk_IBUF_BUFG | set_but_debouncer/s_debounceCnt[23]_i_2__0_n_0 | set_but_debouncer/s_debounceCnt[23]_i_1__0_n_0 |                2 |              8 |
 |  clk_IBUF_BUFG | start_but_debouncer/s_debounceCnt[23]_i_2_n_0  | start_but_debouncer/p_1_in0                    |                2 |              8 |
-|  clk_IBUF_BUFG |                                                |                                                |                6 |             11 |
+|  clk_IBUF_BUFG |                                                |                                                |                8 |             11 |
 |  clk_IBUF_BUFG |                                                | reset_module/s_reset                           |                4 |             12 |
 |  clk_IBUF_BUFG | set_but_debouncer/s_debounceCnt[22]_i_2__0_n_0 | set_but_debouncer/s_debounceCnt[22]_i_1__0_n_0 |                7 |             16 |
 |  clk_IBUF_BUFG | start_but_debouncer/p_2_in                     | start_but_debouncer/s_debounceCnt[22]_i_1_n_0  |                7 |             16 |

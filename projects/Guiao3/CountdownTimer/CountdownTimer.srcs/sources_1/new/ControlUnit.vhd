@@ -54,7 +54,7 @@ end ControlUnit;
 
 architecture Behavioral of ControlUnit is
 
-    type TState is (ST_STOPPED, ST_RUN,ST_MINMS, ST_MINLS, ST_SECMS, ST_SECLS);
+    type TState is (ST_STOPPED, ST_RUN, ST_MINMS, ST_MINLS, ST_SECMS, ST_SECLS);
     signal s_currentState, s_nextState : TState;
 
 begin
@@ -93,7 +93,7 @@ begin
         
             when ST_STOPPED => 
                 runFlag <= '0';
-                if(btnStart = '1') then
+                if(btnStart = '1' and zeroFlag = '0') then
                     s_nextState <= ST_RUN;
                 elsif(btnSet = '1') then
                     s_nextState <= ST_MINMS;
@@ -102,17 +102,18 @@ begin
                 end if;
             
             when ST_RUN => 
-                runFlag <= '1';
-                if(btnStart = '1' or zeroFlag = '1') then
+                if(btnStart = '1') then
+                    s_nextState <= ST_STOPPED;
+                elsif (zeroFlag = '1') then
                     s_nextState <= ST_STOPPED;
                 else
+                    runFlag <= '1';
                     s_nextState <= ST_RUN;
                 end if;
+           
             
             when ST_MINMS =>
                 setFlags(3) <= '1';
-                minMSSetInc <= '0';
-                minMSSetDec <= '0';
                 
                 if(btnUp = '1' and upDownEn = '1') then
                     minMSSetInc <= '1';
@@ -128,8 +129,6 @@ begin
                 
             when ST_MINLS =>
                 setFlags(2) <= '1';
-                minLSSetInc <= '0';
-                minLSSetDec <= '0';
                 
                 if(btnUp = '1' and upDownEn = '1') then
                     minLSSetInc <= '1';
@@ -145,8 +144,6 @@ begin
                 
             when ST_SECMS =>
                 setFlags(1) <= '1';
-                secMSSetInc <= '0';
-                secMSSetDec <= '0';
                 
                 if(btnUp = '1' and upDownEn = '1') then
                     secMSSetInc <= '1';
@@ -162,8 +159,6 @@ begin
                     
             when ST_SECLS =>
                 setFlags(0) <= '1';
-                secLSSetInc <= '0';
-                secLSSetDec <= '0';
                 
                 if(btnUp = '1' and upDownEn = '1') then
                     secLSSetInc <= '1';
