@@ -26,27 +26,27 @@ begin
 		if (rising_edge(clk)) then
 			if (reset = '1') then
 				s_value <= MAX_VAL;
-            elsif (cntEnable = '0' and clkEnable = '1') then
+            elsif (cntEnable = '0') then
 			    if(setIncrem = '1') then
-			     if(s_value = MAX_VAL) then
-			         s_value <= 0;
-			     else
-			         s_value <= s_value + 1;
-			     end if;
+			         if(s_value = MAX_VAL) then
+			             s_value <= 0;
+			         else
+			             s_value <= s_value + 1;
+			         end if;
 			    elsif (setDecrem = '1') then
-	             if(s_value = MAX_VAL) then
-			         s_value <= 0;
-			     else
-			         s_value <= s_value - 1;
-			     end if;
+	                 if(s_value = 0) then
+			             s_value <= MAX_VAL;
+			         else
+			             s_value <= s_value - 1;
+			         end if;
+			    end if;
 			 elsif (cntEnable = '1' and clkEnable = '1') then
-			     if(s_value = MAX_VAL) then
-			         s_value <= 0;
+			     if(s_value = 0) then
+			         s_value <= MAX_VAL;
 			     else
 			         s_value <= s_value - 1;
 			     end if;
-                end if;			
-			end if;
+             end if;			
 		end if;
 	end process;
 
