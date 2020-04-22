@@ -2,6 +2,7 @@
 <sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="CountdownTimerSoftwar_part2" location="C:/CR/projects/Nexys4DefaultPlatform.ori/Guiao4/CountdownTimerSoftwar_part2" platform="C:/CR/projects/Nexys4DefaultPlatform.ori/Guiao4/mb_design_wrapper/export/mb_design_wrapper/mb_design_wrapper.xpfm" platformUID="xilinx:nexys4::0.0(custom)" systemProject="CountdownTimerSoftwar_part2_system" sysConfig="mb_design_wrapper" runtime="C/C++" cpu="standalone_domain" cpuInstance="microblaze_0" os="standalone" mssSignature="5ec40ac85c6f446b83b84563f9ff4a24">
   <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.2040266316" dirty="true">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
   </configuration>
   <configuration name="Release" id="xilinx.gnu.mb.exe.release.2058398420" dirty="true">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>

@@ -210,7 +210,7 @@ void ReadButtons(TButtonStatus* pButtonStatus)
 {
 	unsigned int buttonsPattern;
 
-	buttonsPattern = // Insert your code here...
+	buttonsPattern = XGpio_ReadReg(XPAR_AXI_GPIO_BUTTONS_BASEADDR, XGPIO_DATA_OFFSET);
 
 	pButtonStatus->upPressed    = buttonsPattern & BUTTON_UP_MASK;
 	pButtonStatus->downPressed  = buttonsPattern & BUTTON_DOWN_MASK;
@@ -221,20 +221,80 @@ void ReadButtons(TButtonStatus* pButtonStatus)
 void UpdateStateMachine(TFSMState* pFSMState, TButtonStatus* pButtonStatus,
 						bool zeroFlag, unsigned char* pSetFlags)
 {
-	// Insert your code here...
+	bool start = DetectAndClearRisingEdge(&pButtonStatus->setPrevious, pButtonStatus->setPressed);
+	bool set = DetectAndClearRisingEdge(&pButtonStatus->startPrevious,  pButtonStatus->startPressed);
+	switch (*pFSMState) {
+	case Stopped:
+		*pSetFlags = 0x0;
+		if (!zeroFlag && start)
+			*pFSMState = Started;
+		else if (set)
+			*pFSMState = SetLSSec;
+		break;
+	case Started:
+		*pSetFlags = 0x0;
+		if (zeroFlag || start)
+			*pFSMState = Stopped;
+		break;
+	case SetLSSec:
+		*pSetFlags = 0x1;
+		if (set)
+			*pFSMState = SetMSSec;
+		break;
+	case SetMSSec:
+		*pSetFlags = 0x2;
+		if (set)
+			*pFSMState = SetLSMin;
+		break;
+	case SetLSMin:
+		*pSetFlags = 0x4;
+		if (set)
+			*pFSMState = SetMSMin;
+		break;
+	case SetMSMin:
+		*pSetFlags = 0x8;
+		if (set)
+			*pFSMState = Stopped;
+		break;
+	default:
+		*pSetFlags = 0x0;
+		print("Something wrong append");
+	}
 
+}
+
+void ModularIncDec(unsigned int* pTimerValue, const TButtonStatus* pButtonStatus, unsigned int modulo)
+{
+	if (pButtonStatus->upPressed)
+		ModularInc(pTimerValue, modulo + 1);
+	else if ((pButtonStatus->downPressed))
+		ModularDec(pTimerValue, modulo + 1);
 }
 
 void SetCountDownTimer(TFSMState fsmState, const TButtonStatus* pButtonStatus,
 					   TTimerValue* pTimerValue)
 {
-	// Insert your code here...
-
+	if (fsmState == SetLSSec)
+		ModularIncDec(&pTimerValue->secLSValue, pButtonStatus, 9);
+	else if (fsmState == SetMSSec)
+		ModularIncDec(&pTimerValue->secMSValue, pButtonStatus, 5);
+	else if (fsmState == SetLSMin)
+		ModularIncDec(&pTimerValue->minLSValue, pButtonStatus, 9);
+	else if (fsmState == SetMSMin)
+		ModularIncDec(&pTimerValue->minMSValue, pButtonStatus, 5);
 }
 
 void DecCountDownTimer(TFSMState fsmState, TTimerValue* pTimerValue)
 {
-	// Insert your code here...
+	if (fsmState == Started) {
+		if (ModularDec(&pTimerValue->secLSValue, 9 + 1)) {
+			if (ModularDec(&pTimerValue->secMSValue, 5 + 1)) {
+				if (ModularDec(&pTimerValue->minLSValue, 9 + 1)) {
+					ModularDec(&pTimerValue->minMSValue, 5 + 1);
+				}
+			}
+		}
+	}
 
 }
 
@@ -290,7 +350,8 @@ void TimerIntCallbackHandler(void* callbackParam)
 
 	// Put here operations that must be performed at 800Hz rate
 	// Refresh displays
-    // Insert your code here...
+	RefreshDisplays(digitEnables, digitValues, decPtEnables);
+
 
 
 	if (hwTmrEventCount % 100 == 0) // 8Hz
@@ -298,6 +359,16 @@ void TimerIntCallbackHandler(void* callbackParam)
 		// Put here operations that must be performed at 8Hz rate
 		// Update state machine
 		// Insert your code here...
+		UpdateStateMachine(&fsmState, &buttonStatus, zeroFlag, &setFlags);
+
+		if ((setFlags == 0x0) || (blink2HzStat))
+		{
+			digitEnables = 0x3C; // All digits active
+		}
+		else
+		{
+			digitEnables = (~(setFlags << 2)) & 0x3C; // Setting digit inactive
+		}
 
 
 		if (hwTmrEventCount % 200 == 0) // 4Hz
@@ -305,6 +376,7 @@ void TimerIntCallbackHandler(void* callbackParam)
 			// Put here operations that must be performed at 4Hz rate
 			// Switch digit set 2Hz blink status
 			// Insert your code here...
+			blink2HzStat = !blink2HzStat;
 
 
 			if (hwTmrEventCount % 400 == 0) // 2Hz
@@ -312,10 +384,14 @@ void TimerIntCallbackHandler(void* callbackParam)
 				// Put here operations that must be performed at 2Hz rate
 				// Switch point 1Hz blink status
 				// Insert your code here...
+				blink1HzStat = !blink1HzStat;
+				decPtEnables = (blink1HzStat ? 0x10 : 0x00);
 
 
 				// Digit set increment/decrement
 				// Insert your code here...
+				SetCountDownTimer(fsmState, &buttonStatus, &timerValue);
+				TimerValue2DigitValues(&timerValue, digitValues);
 
 
 				if (hwTmrEventCount == 800) // 1Hz
@@ -323,10 +399,12 @@ void TimerIntCallbackHandler(void* callbackParam)
 					// Put here operations that must be performed at 1Hz rate
 					// Count down timer normal operation
 					// Insert your code here...
-
+					DecCountDownTimer(fsmState, &timerValue);
+					zeroFlag = IsTimerValueZero(&timerValue);
+					TimerValue2DigitValues(&timerValue, digitValues);
 
 					// JUST FOR DEMONSTRATION PURPOSES
-					timerValue.secLSValue++;
+					//timerValue.secLSValue++;
 
 					// Reset hwTmrEventCount every second
 					hwTmrEventCount = 1;
@@ -346,7 +424,7 @@ void TimerIntCallbackHandler(void* callbackParam)
 void ButtonsIntCallbackHandler(void* callbackParam)
 {
 	// Read push buttons
-	// Insert your code here...
+	ReadButtons(&buttonStatus);
 
 
 	// Clear GPIO interrupt request flag
@@ -453,10 +531,14 @@ int main()
 	while (1)
 	{
 		// Put here operations that are performed whenever possible
+		if (zeroFlag)
+			XGpio_WriteReg(XPAR_AXI_GPIO_LEDS_BASEADDR, XGPIO_DATA_OFFSET, 0x0001);
+		else
+			XGpio_WriteReg(XPAR_AXI_GPIO_LEDS_BASEADDR, XGPIO_DATA_OFFSET, 0x0000);
 
 		// JUST FOR DEMONSTRATION PURPOSES
-		xil_printf("\r%d", timerValue.secLSValue);
-		XGpio_WriteReg(XPAR_AXI_GPIO_LEDS_BASEADDR, XGPIO_DATA_OFFSET, timerValue.secLSValue);
+		//xil_printf("\r%d", timerValue.secLSValue);
+		//XGpio_WriteReg(XPAR_AXI_GPIO_LEDS_BASEADDR, XGPIO_DATA_OFFSET, timerValue.secLSValue);
 	}
 
     cleanup_platform();

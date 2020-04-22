@@ -65,13 +65,13 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 1
+  set_param chipscope.maxJobs 3
   open_checkpoint mb_design_wrapper_routed.dcp
-  set_property webtalk.parent_dir C:/Users/asroliveira/CloudStation/CR/Nexys4DefaultPlatform/Nexys4DefaultPlatform.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/CR/projects/Nexys4DefaultPlatform.ori/Nexys4DefaultPlatform.cache/wt [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files c:/Users/asroliveira/CloudStation/CR/Nexys4DefaultPlatform/Nexys4DefaultPlatform.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_0/data/mb_bootloop_le.elf
-  set_property SCOPED_TO_REF mb_design [get_files -all c:/Users/asroliveira/CloudStation/CR/Nexys4DefaultPlatform/Nexys4DefaultPlatform.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_0/data/mb_bootloop_le.elf]
-  set_property SCOPED_TO_CELLS microblaze_0 [get_files -all c:/Users/asroliveira/CloudStation/CR/Nexys4DefaultPlatform/Nexys4DefaultPlatform.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_0/data/mb_bootloop_le.elf]
+  add_files c:/CR/projects/Nexys4DefaultPlatform.ori/Nexys4DefaultPlatform.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_0/data/mb_bootloop_le.elf
+  set_property SCOPED_TO_REF mb_design [get_files -all c:/CR/projects/Nexys4DefaultPlatform.ori/Nexys4DefaultPlatform.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_0/data/mb_bootloop_le.elf]
+  set_property SCOPED_TO_CELLS microblaze_0 [get_files -all c:/CR/projects/Nexys4DefaultPlatform.ori/Nexys4DefaultPlatform.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_0/data/mb_bootloop_le.elf]
   catch { write_mem_info -force mb_design_wrapper.mmi }
   catch { write_bmm -force mb_design_wrapper_bd.bmm }
   write_bitstream -force mb_design_wrapper.bit 
