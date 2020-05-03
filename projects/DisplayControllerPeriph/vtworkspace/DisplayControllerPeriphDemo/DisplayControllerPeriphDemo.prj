@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="DisplayControllerPeriphDemo" location="C:/CR/projects/DisplayControllerPeriph/vtworkspace/DisplayControllerPeriphDemo" platform="C:/CR/projects/DisplayControllerPeriph/vtworkspace/mb_design_wrapper/export/mb_design_wrapper/mb_design_wrapper.xpfm" platformUID="xilinx:nexys4::0.0(custom)" systemProject="DisplayControllerPeriphDemo_system" sysConfig="mb_design_wrapper" runtime="cpp" cpu="standalone_domain" cpuInstance="microblaze_0" os="standalone" mssSignature="01f9a4e4a77ec68c5e26f77a0e5a290b">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.262845634">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.311492081" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>
