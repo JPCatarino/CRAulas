@@ -168,9 +168,9 @@ void RefreshDisplays(unsigned char digitEnables, const unsigned int digitValues[
 					 unsigned char decPtEnables)
 {
 	static unsigned int digitRefreshIdx = 0; // static variable - is preserved across calls
-	Xil_Out32(XPAR_DISPLAYDRIVERPERIPHE_0_S00_AXI_BASEADDR + (DIG_ENABLE_IDX * 4),(~((0x01 << digitRefreshIdx) & digitEnables)));
-	Xil_Out32(XPAR_DISPLAYDRIVERPERIPHE_0_S00_AXI_BASEADDR + (PT_ENABLE_IDX * 4), ~((decPtEnables & (0x01 << digitRefreshIdx)) >> 3));
-	Xil_Out32(XPAR_DISPLAYDRIVERPERIPHE_0_S00_AXI_BASEADDR + (DIG_VAL_IDX * 4), Bin2Hex(digitValues[digitRefreshIdx]));
+	Xil_Out32(XPAR_DISPLAYDRIVERPERIPHE_0_S00_AXI_BASEADDR + (DIG_ENABLE_IDX * 4),digitEnables);
+	Xil_Out32(XPAR_DISPLAYDRIVERPERIPHE_0_S00_AXI_BASEADDR + (PT_ENABLE_IDX * 4), decPtEnables);
+	Xil_Out32(XPAR_DISPLAYDRIVERPERIPHE_0_S00_AXI_BASEADDR + ((DIG_VAL_IDX * 4) + (4*digitRefreshIdx)) , 0xF & digitValues[digitRefreshIdx]);
 
 	digitRefreshIdx++;
 	digitRefreshIdx &= 0x07;
