@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Sun May  3 20:41:27 2020
+// Date        : Mon May  4 00:21:22 2020
 // Host        : DESKTOP-DS21IC9 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/CR/projects/DisplayControllerPeriphUpdated/DisplayControllerPeriphUpdated.srcs/sources_1/bd/mb_design/ip/mb_design_DisplayDriverPeriphe_0_2/mb_design_DisplayDriverPeriphe_0_2_stub.v
+//               C:/CR/projects/DisplayControllerPeriphUpdated/DisplayControllerPeriphUpdated.srcs/sources_1/bd/mb_design/ip/mb_design_DisplayDriverPeriphe_0_2/mb_design_DisplayDriverPeriphe_0_2_stub.v
 // Design      : mb_design_DisplayDriverPeriphe_0_2
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

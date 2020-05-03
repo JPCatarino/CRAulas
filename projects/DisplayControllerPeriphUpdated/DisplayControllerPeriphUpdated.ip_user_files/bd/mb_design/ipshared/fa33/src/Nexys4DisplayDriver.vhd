@@ -60,9 +60,23 @@ architecture Behavioral of Nexys4DisplayDriver is
     signal s_clkEnableCounter : integer;
     signal s_dispEnable       : std_logic; 
     
+    signal s_brtCtrl          : std_logic;
+    
     type TRefreshRateLUT is array (0 to 7) of integer;
     constant REFRESH_RATE_LUT : TRefreshRateLUT := (1999999, 999999, 499999, 249999,
                                                      124999,  62499,  31249,  15624);
+                                                     
+    type TBrightnessLut is array (0 to 7, 0 to 6) of integer;
+    constant BRIGHTNESS_LUT : TBrightnessLut := (
+        (285714,571428,857142,1142857,1428571,1714285,1999999),         -- Refresh Rate   50 Hz, brightness levels 1-7
+        (142857,285714,428571,571428,714285,857142,999999),             -- Refresh Rate  100 Hz, brightness levels 1-7
+        (71428,142857,214285,285714,357142,428571,499999),              -- Refresh Rate  200 Hz, brightness levels 1-7
+        (35714,71428,107142,142857,178571,214285,249999),               -- Refresh Rate  400 Hz, brightness levels 1-7
+        (17857,35714,53571,71428,89285,107142,124999),                  -- Refresh Rate  800 Hz, brightness levels 1-7
+        (8928,17857,26785,35714,44642,53571,62499),                     -- Refresh Rate 1600 Hz, brightness levels 1-7
+        (4464,8928,13392,17857,22321,26785,31249),                      -- Refresh Rate 3200 Hz, brightness levels 1-7
+        (2232,4464,6696,8928,11160,13392,15624)                         -- Refresh Rate 6400 Hz, brightness levels 1-7
+    );
 
 begin
 
@@ -72,12 +86,18 @@ begin
                     if(reset = '0') then
                         s_clkEnableCounter <= 0;
                         s_dispEnable <= '0';
+                        s_brtCtrl <= '1';
                     elsif (s_clkEnableCounter = REFRESH_RATE_LUT(to_integer(unsigned(refrRate)))) then
                         s_clkEnableCounter <= 0;
                         s_dispEnable <= '1';
+                        s_brtCtrl <= '0';
                     else
                         s_clkEnableCounter <= s_clkEnableCounter + 1;
                         s_dispEnable <= '0';
+                        
+                        if(s_clkEnableCounter >= BRIGHTNESS_LUT(to_integer(unsigned(refrRate)), to_integer(unsigned(refrRate)))) then
+                            s_brtCtrl <= '1';
+                        end if;
                     end if;
                 end if;
             end process;
@@ -125,14 +145,14 @@ begin
     dgMux:  process(digitEn, s_counter)
             begin
                 case s_counter is
-                    when "000" => s_enableDigit <= digitEn(0);
-                    when "001" => s_enableDigit <= digitEn(1);
-                    when "010" => s_enableDigit <= digitEn(2);
-                    when "011" => s_enableDigit <= digitEn(3);
-                    when "100" => s_enableDigit <= digitEn(4);
-                    when "101" => s_enableDigit <= digitEn(5);
-                    when "110" => s_enableDigit <= digitEn(6);
-                    when "111" => s_enableDigit <= digitEn(7);
+                    when "000" => s_enableDigit <= digitEn(0) or s_brtCtrl;
+                    when "001" => s_enableDigit <= digitEn(1) or s_brtCtrl;
+                    when "010" => s_enableDigit <= digitEn(2) or s_brtCtrl;
+                    when "011" => s_enableDigit <= digitEn(3) or s_brtCtrl;
+                    when "100" => s_enableDigit <= digitEn(4) or s_brtCtrl;
+                    when "101" => s_enableDigit <= digitEn(5) or s_brtCtrl;
+                    when "110" => s_enableDigit <= digitEn(6) or s_brtCtrl;
+                    when "111" => s_enableDigit <= digitEn(7) or s_brtCtrl;
                 end case;
             end process;
 

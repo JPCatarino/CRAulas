@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Sun May  3 20:46:41 2020
+| Date             : Mon May  4 00:24:14 2020
 | Host             : DESKTOP-DS21IC9 running 64-bit major release  (build 9200)
 | Command          : report_power -file mb_design_wrapper_power_routed.rpt -pb mb_design_wrapper_power_summary_routed.pb -rpx mb_design_wrapper_power_routed.rpx
 | Design           : mb_design_wrapper
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.257        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.159        |
+| Dynamic (W)              | 0.158        |
 | Device Static (W)        | 0.098        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.8         |
@@ -52,16 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.023 |        7 |       --- |             --- |
-| Slice Logic              |     0.006 |    10989 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     4133 |     63400 |            6.52 |
-|   CARRY4                 |    <0.001 |      227 |     15850 |            1.43 |
+| Clocks                   |     0.022 |        7 |       --- |             --- |
+| Slice Logic              |     0.006 |    11031 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     4152 |     63400 |            6.55 |
+|   CARRY4                 |    <0.001 |      231 |     15850 |            1.46 |
 |   LUT as Distributed RAM |    <0.001 |       96 |     19000 |            0.51 |
-|   Register               |    <0.001 |     4588 |    126800 |            3.62 |
-|   F7/F8 Muxes            |    <0.001 |      262 |     63400 |            0.41 |
+|   Register               |    <0.001 |     4589 |    126800 |            3.62 |
+|   F7/F8 Muxes            |    <0.001 |      264 |     63400 |            0.42 |
 |   LUT as Shift Register  |    <0.001 |       83 |     19000 |            0.44 |
 |   Others                 |    <0.001 |      705 |       --- |             --- |
-| Signals                  |     0.010 |     8003 |       --- |             --- |
+| Signals                  |     0.009 |     8002 |       --- |             --- |
 | Block RAM                |     0.005 |       18 |       135 |           13.33 |
 | MMCM                     |     0.106 |        1 |         6 |           16.67 |
 | DSPs                     |     0.002 |        6 |       240 |            2.50 |
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.062 |       0.046 |      0.016 |
+| Vccint    |       1.000 |     0.061 |       0.045 |      0.016 |
 | Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |
 | Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -150,8 +150,8 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| mb_design_wrapper             |     0.159 |
-|   mb_design_i                 |     0.151 |
+| mb_design_wrapper             |     0.158 |
+|   mb_design_i                 |     0.150 |
 |     DisplayDriverPeriphe_0    |     0.001 |
 |       U0                      |     0.001 |
 |     axi_gpio_leds             |     0.001 |
@@ -162,8 +162,8 @@ Table of Contents
 |       U0                      |     0.003 |
 |     clk_wiz_1                 |     0.106 |
 |       inst                    |     0.106 |
-|     microblaze_0              |     0.029 |
-|       U0                      |     0.029 |
+|     microblaze_0              |     0.028 |
+|       U0                      |     0.028 |
 |     microblaze_0_axi_intc     |     0.002 |
 |       U0                      |     0.002 |
 |     microblaze_0_axi_periph   |     0.001 |

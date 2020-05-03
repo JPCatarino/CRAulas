@@ -13,9 +13,9 @@ vhdl xil_defaultlib  \
 "../../../bd/mb_design/ip/mb_design_axi_uartlite_0_0/sim/mb_design_axi_uartlite_0_0.vhd" \
 "../../../bd/mb_design/ip/mb_design_axi_timer_0_0/sim/mb_design_axi_timer_0_0.vhd" \
 "../../../bd/mb_design/ip/mb_design_fit_timer_0_0/sim/mb_design_fit_timer_0_0.vhd" \
-"../../../bd/mb_design/ipshared/482b/src/Nexys4DisplayDriver.vhd" \
-"../../../bd/mb_design/ipshared/482b/hdl/DisplayDriverPeripheralUp_v2_0_S00_AXI.vhd" \
-"../../../bd/mb_design/ipshared/482b/hdl/DisplayDriverPeripheralUp_v2_0.vhd" \
+"../../../bd/mb_design/ipshared/fa33/src/Nexys4DisplayDriver.vhd" \
+"../../../bd/mb_design/ipshared/fa33/hdl/DisplayDriverPeripheralUp_v2_0_S00_AXI.vhd" \
+"../../../bd/mb_design/ipshared/fa33/hdl/DisplayDriverPeripheralUp_v2_0.vhd" \
 "../../../bd/mb_design/ip/mb_design_DisplayDriverPeriphe_0_2/sim/mb_design_DisplayDriverPeriphe_0_2.vhd" \
 "../../../bd/mb_design/sim/mb_design.vhd" \
 
