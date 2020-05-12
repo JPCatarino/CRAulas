@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="CustomPeriphRTOSDemo" location="C:/CR/projects/DisplayControllerRTOS/vt_workspace/CustomPeriphRTOSDemo" platform="C:/CR/projects/DisplayControllerRTOS/vt_workspace/mb_rtos/export/mb_rtos/mb_rtos.xpfm" platformUID="xilinx:nexys4::0.0(custom)" systemProject="CustomPeriphRTOSDemo_system" sysConfig="mb_rtos" runtime="C/C++" cpu="freertos10_xilinx_domain" cpuInstance="microblaze_0" os="freertos10_xilinx" mssSignature="28ef099a588b70bb3d78fee876c4a0fc">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.1332595891">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.1283886984" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="freertos_hello_world"/>
+</sdkproject:SdkProject>
