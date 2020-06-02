@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 3
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -65,16 +66,16 @@ set_property used_in_implementation false [get_files -all c:/CR/projects/Display
 set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_axi_emc_0_0/mb_design_axi_emc_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_axi_emc_0_0/mb_design_axi_emc_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_axi_emc_0_0/mb_design_axi_emc_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_1/mb_design_microblaze_0_1.xdc]
-set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_1/mb_design_microblaze_0_1_ooc_debug.xdc]
-set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_1/mb_design_microblaze_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_dlmb_v10_2/mb_design_dlmb_v10_2.xdc]
-set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_dlmb_v10_2/mb_design_dlmb_v10_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_ilmb_v10_2/mb_design_ilmb_v10_2.xdc]
-set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_ilmb_v10_2/mb_design_ilmb_v10_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_dlmb_bram_if_cntlr_2/mb_design_dlmb_bram_if_cntlr_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_ilmb_bram_if_cntlr_2/mb_design_ilmb_bram_if_cntlr_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_lmb_bram_2/mb_design_lmb_bram_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_2/mb_design_microblaze_0_2.xdc]
+set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_2/mb_design_microblaze_0_2_ooc_debug.xdc]
+set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_2/mb_design_microblaze_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_dlmb_v10_3/mb_design_dlmb_v10_3.xdc]
+set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_dlmb_v10_3/mb_design_dlmb_v10_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_ilmb_v10_3/mb_design_ilmb_v10_3.xdc]
+set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_ilmb_v10_3/mb_design_ilmb_v10_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_dlmb_bram_if_cntlr_3/mb_design_dlmb_bram_if_cntlr_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_ilmb_bram_if_cntlr_3/mb_design_ilmb_bram_if_cntlr_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_lmb_bram_3/mb_design_lmb_bram_3_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_auto_pc_7/mb_design_auto_pc_7_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_auto_pc_0/mb_design_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_auto_pc_1/mb_design_auto_pc_1_ooc.xdc]
@@ -84,7 +85,7 @@ set_property used_in_implementation false [get_files -all c:/CR/projects/Display
 set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_auto_pc_5/mb_design_auto_pc_5_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_auto_pc_6/mb_design_auto_pc_6_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/mb_design_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_1/data/mb_bootloop_le.elf]
+set_property used_in_implementation false [get_files -all c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_microblaze_0_2/data/mb_bootloop_le.elf]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

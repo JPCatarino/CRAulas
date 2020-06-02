@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:user:DisplayDriverPeripheralUp:2.0
--- IP Revision: 8
+-- IP Revision: 9
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;

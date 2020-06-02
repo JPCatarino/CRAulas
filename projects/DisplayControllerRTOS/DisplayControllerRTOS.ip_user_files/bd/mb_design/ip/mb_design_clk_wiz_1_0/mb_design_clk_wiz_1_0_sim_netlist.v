@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Thu Mar 26 10:21:54 2020
-// Host        : ASRO-NUC running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top mb_design_clk_wiz_1_0 -prefix
-//               mb_design_clk_wiz_1_0_ mb_design_clk_wiz_1_0_sim_netlist.v
+// Date        : Tue May 12 16:16:36 2020
+// Host        : DESKTOP-DS21IC9 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               C:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_clk_wiz_1_0/mb_design_clk_wiz_1_0_sim_netlist.v
 // Design      : mb_design_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -35,6 +35,7 @@ module mb_design_clk_wiz_1_0
         .resetn(resetn));
 endmodule
 
+(* ORIG_REF_NAME = "mb_design_clk_wiz_1_0_clk_wiz" *) 
 module mb_design_clk_wiz_1_0_mb_design_clk_wiz_1_0_clk_wiz
    (clk_out1,
     resetn,

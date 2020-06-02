@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Tue May 12 13:40:53 2020
+| Date         : Thu May 14 12:29:11 2020
 | Host         : DESKTOP-DS21IC9 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file mb_design_wrapper_utilization_synth.rpt -pb mb_design_wrapper_utilization_synth.pb
 | Design       : mb_design_wrapper
@@ -161,14 +161,14 @@ Table of Contents
 | mb_design_xbar_0                   |    1 |
 | mb_design_rst_clk_wiz_1_100M_0     |    1 |
 | mb_design_microblaze_0_axi_intc_0  |    1 |
-| mb_design_microblaze_0_1           |    1 |
+| mb_design_microblaze_0_2           |    1 |
 | mb_design_mdm_1_0                  |    1 |
-| mb_design_lmb_bram_2               |    1 |
-| mb_design_ilmb_v10_2               |    1 |
-| mb_design_ilmb_bram_if_cntlr_2     |    1 |
+| mb_design_lmb_bram_3               |    1 |
+| mb_design_ilmb_v10_3               |    1 |
+| mb_design_ilmb_bram_if_cntlr_3     |    1 |
 | mb_design_fit_timer_0_0            |    1 |
-| mb_design_dlmb_v10_2               |    1 |
-| mb_design_dlmb_bram_if_cntlr_2     |    1 |
+| mb_design_dlmb_v10_3               |    1 |
+| mb_design_dlmb_bram_if_cntlr_3     |    1 |
 | mb_design_clk_wiz_1_0              |    1 |
 | mb_design_axi_uartlite_0_0         |    1 |
 | mb_design_axi_timer_0_0            |    1 |

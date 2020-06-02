@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1589287212">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1589455706">
   <File Type="PA-TCL" Name="mb_design_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="mb_design_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="mb_design_wrapper_reports.tcl"/>
@@ -56,7 +56,20 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_microblaze_0_axi_intc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_design_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_fit_timer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_axi_uartlite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_rst_clk_wiz_1_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_mdm_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_axi_gpio_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_axi_timer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_microblaze_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_axi_emc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="mb_design_DisplayDriverPeriphe_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_design_microblaze_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_ilmb_bram_if_cntlr_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_design_lmb_bram_3"/>
 </GenRun>

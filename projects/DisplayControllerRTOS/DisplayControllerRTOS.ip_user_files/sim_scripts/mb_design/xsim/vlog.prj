@@ -3,7 +3,7 @@ verilog xil_defaultlib --include "../../../../DisplayControllerRTOS.srcs/sources
 "../../../bd/mb_design/ip/mb_design_microblaze_0_xlconcat_0/sim/mb_design_microblaze_0_xlconcat_0.v" \
 "../../../bd/mb_design/ip/mb_design_clk_wiz_1_0/mb_design_clk_wiz_1_0_clk_wiz.v" \
 "../../../bd/mb_design/ip/mb_design_clk_wiz_1_0/mb_design_clk_wiz_1_0.v" \
-"../../../bd/mb_design/ip/mb_design_lmb_bram_2/sim/mb_design_lmb_bram_2.v" \
+"../../../bd/mb_design/ip/mb_design_lmb_bram_3/sim/mb_design_lmb_bram_3.v" \
 "../../../bd/mb_design/ip/mb_design_auto_pc_7/sim/mb_design_auto_pc_7.v" \
 "../../../bd/mb_design/ip/mb_design_auto_pc_0/sim/mb_design_auto_pc_0.v" \
 "../../../bd/mb_design/ip/mb_design_auto_pc_1/sim/mb_design_auto_pc_1.v" \

@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Wed May  6 03:47:24 2020
+// Date        : Tue May 12 16:17:55 2020
 // Host        : DESKTOP-DS21IC9 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               C:/CR/projects/PlatformWithExtMemory/PlatformWithExtMemory.srcs/sources_1/bd/mb_design/ip/mb_design_fit_timer_0_0/mb_design_fit_timer_0_0_sim_netlist.v
+//               C:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_fit_timer_0_0/mb_design_fit_timer_0_0_sim_netlist.v
 // Design      : mb_design_fit_timer_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

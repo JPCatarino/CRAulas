@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Thu May  7 11:41:03 2020
-# Process ID: 14504
+# Start of session at: Thu May 14 12:26:23 2020
+# Process ID: 2248
 # Current directory: C:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.runs/mb_design_xbar_0_synth_1
 # Command line: vivado.exe -log mb_design_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_design_xbar_0.tcl
 # Log file: C:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.runs/mb_design_xbar_0_synth_1/mb_design_xbar_0.vds
@@ -19,9 +19,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17528 
+INFO: Helper process launched with PID 9708 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 958.531 ; gain = 234.676
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 957.867 ; gain = 235.199
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'mb_design_xbar_0' [c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ip/mb_design_xbar_0/synth/mb_design_xbar_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_axi_crossbar' [c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
@@ -33,8 +33,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_axi_crossbar' [c:
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_NUM_ADDR_RANGES bound to: 1 - type: integer 
-	Parameter C_M_AXI_BASE_ADDR bound to: 512'b00000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000001000000011000000000000000000000000000000000000000000000000000000100000111000000000000000000000000000000000000000000000000000000010000000000001100000000000000000000000000000000000000000000000001000000000000100000000000000000000000000000000000000000000000000100010010100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000001001000000000000000000000 
-	Parameter C_M_AXI_ADDR_WIDTH bound to: 256'b0000000000000000000000000001100000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000 
+	Parameter C_M_AXI_BASE_ADDR bound to: 512'b00000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000001000000011000000000000000000000000000000000000000000000000000000100000111000000000000000000000000000000000000000000000000000000010000000000001000000000000000000000000000000000000000000000000001000000000000010000000000000000000000000000000000000000000000000100010010100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000001001000000000000000000000 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 256'b0000000000000000000000000001100100000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000 
 	Parameter C_S_AXI_BASE_ID bound to: 96'b000000000000000000000000000000100000000000000000000000000000000100000000000000000000000000000000 
 	Parameter C_S_AXI_THREAD_ID_WIDTH bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
@@ -43,7 +43,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_axi_crossbar' [c:
 	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
-	Parameter C_M_AXI_WRITE_CONNECTIVITY bound to: 256'b0000000000000000000000000000001100000000000000000000000000000011000000000000000000000000000000110000000000000000000000000000001100000000000000000000000000000011000000000000000000000000000000110000000000000000000000000000001100000000000000000000000000000011 
+	Parameter C_M_AXI_WRITE_CONNECTIVITY bound to: 256'b0000000000000000000000000000011100000000000000000000000000000111000000000000000000000000000001110000000000000000000000000000011100000000000000000000000000000111000000000000000000000000000001110000000000000000000000000000011100000000000000000000000000000111 
 	Parameter C_M_AXI_READ_CONNECTIVITY bound to: 256'b0000000000000000000000000000011100000000000000000000000000000111000000000000000000000000000001110000000000000000000000000000011100000000000000000000000000000111000000000000000000000000000001110000000000000000000000000000011100000000000000000000000000000111 
 	Parameter C_R_REGISTER bound to: 1 - type: integer 
 	Parameter C_S_AXI_SINGLE_THREAD bound to: 96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
@@ -64,7 +64,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_axi_crossbar' [c:
 	Parameter P_INCR bound to: 2'b01 
 	Parameter P_M_AXI_SUPPORTS_WRITE bound to: 8'b11111111 
 	Parameter P_M_AXI_SUPPORTS_READ bound to: 8'b11111111 
-	Parameter P_S_AXI_SUPPORTS_WRITE bound to: 3'b011 
+	Parameter P_S_AXI_SUPPORTS_WRITE bound to: 3'b111 
 	Parameter P_S_AXI_SUPPORTS_READ bound to: 3'b111 
 	Parameter C_DEBUG bound to: 1 - type: integer 
 	Parameter P_RANGE_CHECK bound to: 1 - type: integer 
@@ -82,8 +82,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_crossbar_sasd' [c
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
-	Parameter C_M_AXI_BASE_ADDR bound to: 512'b00000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000001000000011000000000000000000000000000000000000000000000000000000100000111000000000000000000000000000000000000000000000000000000010000000000001100000000000000000000000000000000000000000000000001000000000000100000000000000000000000000000000000000000000000000100010010100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000001001000000000000000000000 
-	Parameter C_M_AXI_HIGH_ADDR bound to: 512'b00000000000000000000000000000000011000001111111111111111111111110000000000000000000000000000000001000000011000001111111111111111000000000000000000000000000000000100000111000000111111111111111100000000000000000000000000000000010000000000001111111111111111110000000000000000000000000000000001000000000000101111111111111111000000000000000000000000000000000100010010100000111111111111111100000000000000000000000000000000010000000000000011111111111111110000000000000000000000000000000001000001001000001111111111111111 
+	Parameter C_M_AXI_BASE_ADDR bound to: 512'b00000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000001000000011000000000000000000000000000000000000000000000000000000100000111000000000000000000000000000000000000000000000000000000010000000000001000000000000000000000000000000000000000000000000001000000000000010000000000000000000000000000000000000000000000000100010010100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000001001000000000000000000000 
+	Parameter C_M_AXI_HIGH_ADDR bound to: 512'b00000000000000000000000000000000011000011111111111111111111111110000000000000000000000000000000001000000011000001111111111111111000000000000000000000000000000000100000111000000111111111111111100000000000000000000000000000000010000000000001011111111111111110000000000000000000000000000000001000000000000011111111111111111000000000000000000000000000000000100010010100000111111111111111100000000000000000000000000000000010000000000000011111111111111110000000000000000000000000000000001000001001000001111111111111111 
 	Parameter C_S_AXI_BASE_ID bound to: 192'b000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_S_AXI_HIGH_ID bound to: 192'b000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
@@ -92,7 +92,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_crossbar_sasd' [c
 	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
-	Parameter C_S_AXI_SUPPORTS_WRITE bound to: 3'b011 
+	Parameter C_S_AXI_SUPPORTS_WRITE bound to: 3'b111 
 	Parameter C_S_AXI_SUPPORTS_READ bound to: 3'b111 
 	Parameter C_M_AXI_SUPPORTS_WRITE bound to: 8'b11111111 
 	Parameter C_M_AXI_SUPPORTS_READ bound to: 8'b11111111 
@@ -135,8 +135,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_21_addr_decoder' [c:
 	Parameter C_TARGET_ENC bound to: 1 - type: integer 
 	Parameter C_TARGET_HOT bound to: 1 - type: integer 
 	Parameter C_REGION_ENC bound to: 1 - type: integer 
-	Parameter C_BASE_ADDR bound to: 512'b00000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000001000000011000000000000000000000000000000000000000000000000000000100000111000000000000000000000000000000000000000000000000000000010000000000001100000000000000000000000000000000000000000000000001000000000000100000000000000000000000000000000000000000000000000100010010100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000001001000000000000000000000 
-	Parameter C_HIGH_ADDR bound to: 512'b00000000000000000000000000000000011000001111111111111111111111110000000000000000000000000000000001000000011000001111111111111111000000000000000000000000000000000100000111000000111111111111111100000000000000000000000000000000010000000000001111111111111111110000000000000000000000000000000001000000000000101111111111111111000000000000000000000000000000000100010010100000111111111111111100000000000000000000000000000000010000000000000011111111111111110000000000000000000000000000000001000001001000001111111111111111 
+	Parameter C_BASE_ADDR bound to: 512'b00000000000000000000000000000000011000000000000000000000000000000000000000000000000000000000000001000000011000000000000000000000000000000000000000000000000000000100000111000000000000000000000000000000000000000000000000000000010000000000001000000000000000000000000000000000000000000000000001000000000000010000000000000000000000000000000000000000000000000100010010100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001000001001000000000000000000000 
+	Parameter C_HIGH_ADDR bound to: 512'b00000000000000000000000000000000011000011111111111111111111111110000000000000000000000000000000001000000011000001111111111111111000000000000000000000000000000000100000111000000111111111111111100000000000000000000000000000000010000000000001011111111111111110000000000000000000000000000000001000000000000011111111111111111000000000000000000000000000000000100010010100000111111111111111100000000000000000000000000000000010000000000000011111111111111110000000000000000000000000000000001000001001000001111111111111111 
 	Parameter C_TARGET_QUAL bound to: 9'b011111111 
 	Parameter C_RESOLUTION bound to: 2 - type: integer 
 	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
@@ -169,7 +169,7 @@ INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_s
 INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' (2#1) [c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized2' [c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_VALUE bound to: 30'b010000000000001000000000000000 
+	Parameter C_VALUE bound to: 30'b010000000000000100000000000000 
 	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 5 - type: integer 
@@ -177,7 +177,7 @@ INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_s
 INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized2' (2#1) [c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized3' [c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_VALUE bound to: 30'b010000000000001100000000000000 
+	Parameter C_VALUE bound to: 30'b010000000000001000000000000000 
 	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 5 - type: integer 
@@ -346,51 +346,45 @@ WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awid[2]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awid[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awid[0]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[95]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[94]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[93]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[92]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[91]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[90]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[89]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[88]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[87]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[86]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[85]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[84]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[83]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[82]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[81]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[80]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[79]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[78]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[77]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[76]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[75]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[74]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[73]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[72]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[71]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[70]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[69]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[68]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[67]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[66]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[65]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awaddr[64]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awlen[23]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awlen[22]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awlen[21]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awlen[20]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awlen[19]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awlen[18]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awlen[17]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awlen[16]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awsize[8]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awsize[7]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awuser[2]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awuser[1]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_awuser[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_wid[5]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_wid[4]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_wid[3]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_wid[2]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_wid[1]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_wid[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_wuser[2]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_wuser[1]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_wuser[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_arid[5]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_arid[4]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_arid[3]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_arid[2]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_arid[1]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_arid[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_aruser[2]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_aruser[1]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port s_axi_aruser[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_buser[7]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_buser[6]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_buser[5]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_buser[4]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_buser[3]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_buser[2]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_buser[1]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_buser[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_ruser[7]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_ruser[6]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_ruser[5]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_ruser[4]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_ruser[3]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_ruser[2]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_ruser[1]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_axi_crossbar has unconnected port m_axi_ruser[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1140.039 ; gain = 416.184
+Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1140.867 ; gain = 418.199
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -403,12 +397,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1140.039 ; gain = 416.184
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1140.867 ; gain = 418.199
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1140.039 ; gain = 416.184
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1140.867 ; gain = 418.199
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 1140.039 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 1140.867 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -419,27 +413,27 @@ Parsing XDC File [C:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.run
 Finished Parsing XDC File [C:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.runs/mb_design_xbar_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1141.984 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1145.602 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 1152.652 ; gain = 10.668
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.139 . Memory (MB): peak = 1157.117 ; gain = 11.516
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1152.652 ; gain = 428.797
+Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1157.117 ; gain = 434.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1152.652 ; gain = 428.797
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1157.117 ; gain = 434.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.runs/mb_design_xbar_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1152.652 ; gain = 428.797
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1157.117 ; gain = 434.449
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'gen_axi.s_axi_rvalid_i_reg' into 'gen_axi.read_cs_reg[0:0]' [c:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.srcs/sources_1/bd/mb_design/ipshared/6b0d/hdl/axi_crossbar_v2_1_vl_rfs.v:3669]
 INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.write_cs_reg' in module 'axi_crossbar_v2_1_21_decerr_slave'
@@ -452,7 +446,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.write_cs_reg' in mo
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.write_cs_reg' using encoding 'one-hot' in module 'axi_crossbar_v2_1_21_decerr_slave'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1152.652 ; gain = 428.797
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1157.117 ; gain = 434.449
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -582,10 +576,15 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_sasd.crossbar_sasd_0/addr_arbiter_inst/s_awvalid_reg_reg[2] )
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_addr_decoder has unconnected port ADDR[15]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_addr_decoder has unconnected port ADDR[14]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_addr_decoder has unconnected port ADDR[13]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_addr_decoder has unconnected port ADDR[12]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_21_addr_decoder has unconnected port ADDR[11]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_arbiter.last_rr_hot_reg[1]' (FDRE) to 'inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_arbiter.m_grant_enc_i_reg[0]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1152.652 ; gain = 428.797
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1157.117 ; gain = 434.449
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -597,13 +596,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1152.652 ; gain = 428.797
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1157.117 ; gain = 434.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1197.230 ; gain = 473.375
+Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1195.641 ; gain = 472.973
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -615,7 +614,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1198.234 ; gain = 474.379
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 1196.645 ; gain = 473.977
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -639,13 +638,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1201.027 ; gain = 477.172
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1201.445 ; gain = 478.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1201.027 ; gain = 477.172
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1201.445 ; gain = 478.777
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -664,25 +663,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 1201.027 ; gain = 477.172
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1201.445 ; gain = 478.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1201.027 ; gain = 477.172
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1201.445 ; gain = 478.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1201.027 ; gain = 477.172
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1201.445 ; gain = 478.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1201.027 ; gain = 477.172
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1201.445 ; gain = 478.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -699,12 +698,12 @@ Report Cell Usage:
 |      |Cell |Count |
 +------+-----+------+
 |1     |LUT1 |     2|
-|2     |LUT2 |    43|
-|3     |LUT3 |    35|
-|4     |LUT4 |   143|
-|5     |LUT5 |   152|
-|6     |LUT6 |   229|
-|7     |FDRE |   184|
+|2     |LUT2 |    47|
+|3     |LUT3 |    16|
+|4     |LUT4 |    77|
+|5     |LUT5 |   139|
+|6     |LUT6 |   309|
+|7     |FDRE |   186|
 |8     |FDSE |     2|
 +------+-----+------+
 
@@ -712,43 +711,43 @@ Report Instance Areas:
 +------+-------------------------------------+-----------------------------------------------+------+
 |      |Instance                             |Module                                         |Cells |
 +------+-------------------------------------+-----------------------------------------------+------+
-|1     |top                                  |                                               |   790|
-|2     |  inst                               |axi_crossbar_v2_1_21_axi_crossbar              |   790|
-|3     |    \gen_sasd.crossbar_sasd_0        |axi_crossbar_v2_1_21_crossbar_sasd             |   790|
-|4     |      addr_arbiter_inst              |axi_crossbar_v2_1_21_addr_arbiter_sasd         |   428|
+|1     |top                                  |                                               |   778|
+|2     |  inst                               |axi_crossbar_v2_1_21_axi_crossbar              |   778|
+|3     |    \gen_sasd.crossbar_sasd_0        |axi_crossbar_v2_1_21_crossbar_sasd             |   778|
+|4     |      addr_arbiter_inst              |axi_crossbar_v2_1_21_addr_arbiter_sasd         |   426|
 |5     |      \gen_decerr.decerr_slave_inst  |axi_crossbar_v2_1_21_decerr_slave              |    54|
-|6     |      reg_slice_r                    |axi_register_slice_v2_1_20_axic_register_slice |   269|
-|7     |      splitter_ar                    |axi_crossbar_v2_1_21_splitter__parameterized0  |     4|
-|8     |      splitter_aw                    |axi_crossbar_v2_1_21_splitter                  |    12|
+|6     |      reg_slice_r                    |axi_register_slice_v2_1_20_axic_register_slice |   257|
+|7     |      splitter_ar                    |axi_crossbar_v2_1_21_splitter__parameterized0  |     8|
+|8     |      splitter_aw                    |axi_crossbar_v2_1_21_splitter                  |    11|
 +------+-------------------------------------+-----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 1201.027 ; gain = 477.172
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1201.445 ; gain = 478.777
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 206 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 1201.027 ; gain = 464.559
-Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:50 . Memory (MB): peak = 1201.027 ; gain = 477.172
+Synthesis finished with 0 errors, 0 critical warnings and 109 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:58 . Memory (MB): peak = 1201.445 ; gain = 462.527
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 1201.445 ; gain = 478.777
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1213.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1213.508 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1213.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1213.508 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-67 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+66 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 1213.102 ; gain = 775.941
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1213.102 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:07 ; elapsed = 00:01:12 . Memory (MB): peak = 1213.508 ; gain = 777.707
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1213.508 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.runs/mb_design_xbar_0_synth_1/mb_design_xbar_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mb_design_xbar_0, cache-ID = 5ed5b0969a6a6bb6
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mb_design_xbar_0, cache-ID = 4cae434b460f0b2e
 INFO: [Coretcl 2-1174] Renamed 7 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1213.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1213.508 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/CR/projects/DisplayControllerRTOS/DisplayControllerRTOS.runs/mb_design_xbar_0_synth_1/mb_design_xbar_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mb_design_xbar_0_utilization_synth.rpt -pb mb_design_xbar_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu May  7 11:42:13 2020...
+INFO: [Common 17-206] Exiting Vivado at Thu May 14 12:27:48 2020...
